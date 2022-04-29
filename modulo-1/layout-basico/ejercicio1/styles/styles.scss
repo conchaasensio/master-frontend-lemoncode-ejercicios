@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 body {
   box-sizing: border-box;
   display: flex;
@@ -25,4 +27,55 @@ body {
   padding: 3px;
   border-radius: 20px;
   font-weight: bold;
+}
+
+.container-1 {
+  .base-color {
+    background-color: $baseColor1;
+  }
+  @for $i from 1 through 4 {
+    .lighten-#{$i} {
+      background-color: lighten($baseColor1, 10% * $i);
+    }
+    @for $i from 1 through 4 {
+      .darken-#{$i} {
+        background-color: darken($baseColor1, +10% * $i);
+        color: antiquewhite;
+      }
+    }
+  }
+}
+
+.container-2 {
+  .base-color {
+    background-color: $baseColor2;
+  }
+  @for $i from 1 through 4 {
+    .lighten-#{$i} {
+      background-color: lighten($baseColor2, 10% * $i);
+    }
+    @for $i from 1 through 4 {
+      .darken-#{$i} {
+        background-color: darken($baseColor2, 10% * $i);
+        color: antiquewhite;
+      }
+    }
+  }
+}
+
+.container-3 {
+  .base-color {
+    background-color: $baseColor3;
+  }
+  @for $i from 1 through 4 {
+    .lighten-#{$i} {
+      background-color: lighten($baseColor3, 10% * $i);
+    }
+    @for $i from 1 through 4 {
+      .darken-#{$i} {
+        background-color: darken($baseColor3, 10% * $i);
+        color: antiquewhite;
+      }
+    }
+  }
 }
