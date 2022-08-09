@@ -1,4 +1,4 @@
-@import "theme1.scss";
+@import "theme2.scss";
 
 body {
   background: #afe7f5;
@@ -15,10 +15,11 @@ body {
     width: 100px;
     height: 100px;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    border: $border;
     border-radius: $borderRadius;
-    box-shadow: $boxShadow;
     font-family: $primaryFont;
 
     &--base {
@@ -33,6 +34,23 @@ body {
 
     &--warning {
       background: $warningColor;
+    }
+
+    &--shadowed {
+      box-shadow: $boxShadow;
+    }
+
+  }
+
+  .text {
+    color: blue;
+    
+    &--primary {
+      font-family: $primaryFont;
+    }
+
+    &--secondary{
+      font-family: $secondaryFont;
     }
   }
 }
