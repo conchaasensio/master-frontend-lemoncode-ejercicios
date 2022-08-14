@@ -1,0 +1,43 @@
+.text {
+  font-weight: 600;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  background-color: #0072a3;
+  color: white;
+
+  @media screen and (max-width: 768px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  .box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0072a3;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #33f0c7;
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
+}
